@@ -1,0 +1,161 @@
+import { Link } from "react-router-dom";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const services = [
+  { name: "Restoration Services", href: "/services/restoration" },
+  { name: "Painting", href: "/services/painting" },
+  { name: "Concrete Services", href: "/services/concrete" },
+  { name: "Drywall & Taping", href: "/services/drywall" },
+  { name: "Flooring Installation", href: "/services/flooring" },
+  { name: "Renovations & Remodeling", href: "/services/renovations" },
+];
+
+const quickLinks = [
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Projects", href: "/projects" },
+  { name: "Service Areas", href: "/service-areas" },
+  { name: "Contact", href: "/contact" },
+];
+
+export function Footer() {
+  return (
+    <footer className="bg-foreground text-background">
+      {/* CTA Section */}
+      <div className="gradient-primary">
+        <div className="container-custom py-12 text-center">
+          <h2 className="font-heading text-2xl font-bold text-primary-foreground md:text-3xl">
+            Ready to Start Your Project?
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-primary-foreground/80">
+            Get a free, no-obligation estimate for your maintenance or renovation project.
+          </p>
+          <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Button variant="hero-outline" size="lg" asChild>
+              <Link to="/contact">Get a Free Estimate</Link>
+            </Button>
+            <Button variant="hero-outline" size="lg" asChild>
+              <a href="tel:+14031234567" className="gap-2">
+                <Phone className="h-5 w-5" />
+                Call Now
+              </a>
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Footer */}
+      <div className="container-custom py-12">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <Link to="/" className="flex items-center gap-2">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+                <span className="font-heading text-xl font-bold text-primary-foreground">N</span>
+              </div>
+              <div>
+                <p className="font-heading text-lg font-bold text-background">Ninajean</p>
+                <p className="text-xs text-background/60">Maintenance & Renovation</p>
+              </div>
+            </Link>
+            <p className="mt-4 text-sm text-background/70">
+              Professional maintenance and renovation services in Calgary, Alberta. Quality
+              workmanship you can trust.
+            </p>
+            <div className="mt-6 space-y-3">
+              <a
+                href="tel:+14031234567"
+                className="flex items-center gap-3 text-sm text-background/70 hover:text-background"
+              >
+                <Phone className="h-4 w-4" />
+                (403) 123-4567
+              </a>
+              <a
+                href="mailto:info@ninajean.ca"
+                className="flex items-center gap-3 text-sm text-background/70 hover:text-background"
+              >
+                <Mail className="h-4 w-4" />
+                info@ninajean.ca
+              </a>
+              <p className="flex items-center gap-3 text-sm text-background/70">
+                <MapPin className="h-4 w-4" />
+                Calgary, Alberta, Canada
+              </p>
+              <p className="flex items-center gap-3 text-sm text-background/70">
+                <Clock className="h-4 w-4" />
+                Mon - Sat: 7:00 AM - 6:00 PM
+              </p>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="font-heading text-lg font-semibold text-background">Our Services</h3>
+            <ul className="mt-4 space-y-2">
+              {services.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.href}
+                    className="text-sm text-background/70 hover:text-background"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link to="/services" className="text-sm font-medium text-primary hover:underline">
+                  View All Services →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-heading text-lg font-semibold text-background">Quick Links</h3>
+            <ul className="mt-4 space-y-2">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link to={link.href} className="text-sm text-background/70 hover:text-background">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Service Areas */}
+          <div>
+            <h3 className="font-heading text-lg font-semibold text-background">Service Areas</h3>
+            <ul className="mt-4 space-y-2">
+              <li className="text-sm text-background/70">Calgary, AB</li>
+              <li className="text-sm text-background/70">Airdrie</li>
+              <li className="text-sm text-background/70">Cochrane</li>
+              <li className="text-sm text-background/70">Okotoks</li>
+              <li className="text-sm text-background/70">Chestermere</li>
+            </ul>
+            <Link
+              to="/service-areas"
+              className="mt-3 inline-block text-sm font-medium text-primary hover:underline"
+            >
+              View All Areas →
+            </Link>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 border-t border-background/20 pt-8">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+            <p className="text-center text-sm text-background/60 md:text-left">
+              © {new Date().getFullYear()} Ninajean Maintenance & Renovation. All rights reserved.
+            </p>
+            <p className="text-center text-sm text-background/60 md:text-right">
+              Serving Calgary & Surrounding Areas
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
