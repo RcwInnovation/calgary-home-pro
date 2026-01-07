@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
@@ -17,6 +17,13 @@ const quickLinks = [
   { name: "Projects", href: "/projects" },
   { name: "Service Areas", href: "/service-areas" },
   { name: "Contact", href: "/contact" },
+];
+
+const socialLinks = [
+  { name: "Facebook", icon: Facebook, href: "https://facebook.com" },
+  { name: "Instagram", icon: Instagram, href: "https://instagram.com" },
+  { name: "Twitter", icon: Twitter, href: "https://twitter.com" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com" },
 ];
 
 export function Footer() {
@@ -87,6 +94,21 @@ export function Footer() {
                 Mon - Sat: 7:00 AM - 6:00 PM
               </p>
             </div>
+            {/* Social Media Icons */}
+            <div className="mt-6 flex gap-3">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-background/10 text-background/70 transition-colors hover:bg-primary hover:text-primary-foreground"
+                  aria-label={social.name}
+                >
+                  <social.icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Services */}
@@ -152,6 +174,20 @@ export function Footer() {
             </p>
             <p className="text-center text-sm text-background/60 md:text-right">
               Serving Calgary & Surrounding Areas
+            </p>
+          </div>
+          {/* Created By Credit */}
+          <div className="mt-4 text-center">
+            <p className="text-sm text-background/50">
+              Created by{" "}
+              <a
+                href="https://rcwinnovation.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Rcw Innovation Inc
+              </a>
             </p>
           </div>
         </div>
