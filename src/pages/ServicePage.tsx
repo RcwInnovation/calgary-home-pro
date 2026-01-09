@@ -427,6 +427,43 @@ const servicesData: Record<string, ServiceData> = {
       },
     ],
   },
+  cleaning: {
+    title: "Cleaning Services",
+    metaTitle: "Cleaning Services in Calgary",
+    description: [
+      "Keep your Calgary home or business spotless with professional cleaning services from Ninajean. We provide thorough, reliable cleaning for residential and commercial properties.",
+      "Our cleaning team is trained, professional, and detail-oriented. Whether you need regular maintenance cleaning, deep cleaning, or post-construction cleanup, we deliver consistently excellent results.",
+      "We use quality cleaning products and proven techniques to ensure every surface is sanitized and sparkling. Trust Ninajean to maintain a clean, healthy environment for your family or employees.",
+    ],
+    includes: [
+      "Regular house cleaning",
+      "Deep cleaning services",
+      "Move-in/move-out cleaning",
+      "Post-construction cleanup",
+      "Commercial office cleaning",
+      "Window and surface cleaning",
+    ],
+    bestFor: [
+      "Busy homeowners needing regular cleaning",
+      "Property managers between tenants",
+      "Post-renovation cleanup",
+      "Commercial spaces requiring maintenance",
+    ],
+    faqs: [
+      {
+        question: "Do you bring your own cleaning supplies?",
+        answer: "Yes, we bring all necessary cleaning supplies and equipment. If you have preferences for specific products (eco-friendly, hypoallergenic), let us know and we can accommodate.",
+      },
+      {
+        question: "How often should I schedule cleaning?",
+        answer: "It depends on your needs. Most residential clients prefer weekly or bi-weekly cleaning. We also offer one-time deep cleaning or monthly maintenance options.",
+      },
+      {
+        question: "Are your cleaners insured?",
+        answer: "Yes, all our cleaning staff are fully insured and background-checked for your peace of mind and security.",
+      },
+    ],
+  },
 };
 
 export default function ServicePage() {
