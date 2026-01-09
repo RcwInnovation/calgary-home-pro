@@ -15,6 +15,7 @@ import carpentryImg from "@/assets/services/carpentry.jpg";
 import doorsWindowsImg from "@/assets/services/doors-windows.jpg";
 import sidingImg from "@/assets/services/siding.jpg";
 import decksImg from "@/assets/services/decks.jpg";
+import cleaningImg from "@/assets/services/cleaning.jpg";
 
 const services = [
   {
@@ -82,6 +83,12 @@ const services = [
     image: decksImg,
     href: "/services/decks-fences",
     description: "Custom deck building, fence installation, and outdoor living spaces.",
+  },
+  {
+    name: "Cleaning Services",
+    image: cleaningImg,
+    href: "/services/cleaning",
+    description: "Professional residential and commercial cleaning services for spotless spaces.",
   },
 ];
 

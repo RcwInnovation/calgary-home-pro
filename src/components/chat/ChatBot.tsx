@@ -21,6 +21,7 @@ const knowledgeBase = {
     "Doors & Windows Installation",
     "Siding & Exterior Work",
     "Decks & Fences",
+    "Cleaning Services",
   ],
   areas: ["Calgary", "Airdrie", "Cochrane", "Okotoks", "Chestermere"],
   contact: {
@@ -88,6 +89,14 @@ const getResponse = (message: string): string => {
     lowerMessage.includes("outdoor")
   ) {
     return "We build custom decks, fences, and outdoor living spaces. From design to construction, we create beautiful and durable outdoor areas for your property.";
+  }
+
+  // Cleaning
+  if (
+    lowerMessage.includes("clean") ||
+    lowerMessage.includes("limpieza")
+  ) {
+    return "We offer professional cleaning services including regular house cleaning, deep cleaning, move-in/move-out cleaning, and post-construction cleanup for both residential and commercial properties. Request a free estimate today!";
   }
 
   // Areas
