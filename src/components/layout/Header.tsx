@@ -11,6 +11,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.jpeg";
 
 const services = [
   { name: "Restoration Services", href: "/services/restoration" },
@@ -24,6 +25,7 @@ const services = [
   { name: "Doors & Windows", href: "/services/doors-windows" },
   { name: "Siding & Exterior", href: "/services/siding" },
   { name: "Decks & Fences", href: "/services/decks-fences" },
+  { name: "Cleaning Services", href: "/services/cleaning" },
 ];
 
 const navigation = [
@@ -50,14 +52,12 @@ export function Header() {
       <div className="container-custom">
         <div className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-              <span className="font-heading text-xl font-bold text-primary-foreground">N</span>
-            </div>
-            <div className="hidden sm:block">
-              <p className="font-heading text-lg font-bold leading-tight text-foreground">Ninajean</p>
-              <p className="text-xs text-muted-foreground">Maintenance & Renovation</p>
-            </div>
+          <Link to="/" className="flex items-center gap-2 shrink-0">
+            <img 
+              src={logo} 
+              alt="Nina Jean Maintenance Renovation Ltd" 
+              className="h-12 w-auto md:h-14"
+            />
           </Link>
 
           {/* Desktop Navigation */}

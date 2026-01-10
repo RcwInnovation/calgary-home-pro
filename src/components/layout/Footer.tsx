@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.jpeg";
 
 const services = [
   { name: "Restoration Services", href: "/services/restoration" },
@@ -57,14 +58,12 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                <span className="font-heading text-xl font-bold text-primary-foreground">N</span>
-              </div>
-              <div>
-                <p className="font-heading text-lg font-bold text-background">Ninajean</p>
-                <p className="text-xs text-background/60">Maintenance & Renovation</p>
-              </div>
+            <Link to="/" className="inline-block">
+              <img 
+                src={logo} 
+                alt="Nina Jean Maintenance Renovation Ltd" 
+                className="h-16 w-auto bg-white rounded-lg p-1"
+              />
             </Link>
             <p className="mt-4 text-sm text-background/70">
               Professional maintenance and renovation services in Calgary, Alberta. Quality
