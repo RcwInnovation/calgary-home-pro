@@ -10,6 +10,36 @@ import {
 } from "@/components/ui/accordion";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
+// Service images
+import restorationImg from "@/assets/services/restoration.jpg";
+import paintingImg from "@/assets/services/painting.jpg";
+import concreteImg from "@/assets/services/concrete.jpg";
+import drywallImg from "@/assets/services/drywall.jpg";
+import flooringImg from "@/assets/services/flooring.jpg";
+import renovationsImg from "@/assets/services/renovations.jpg";
+import demolitionImg from "@/assets/services/demolition.jpg";
+import carpentryImg from "@/assets/services/carpentry.jpg";
+import doorsWindowsImg from "@/assets/services/doors-windows.jpg";
+import sidingImg from "@/assets/services/siding.jpg";
+import decksImg from "@/assets/services/decks.jpg";
+import cleaningImg from "@/assets/services/cleaning.jpg";
+
+// Service image mapping
+const serviceImages: Record<string, string> = {
+  restoration: restorationImg,
+  painting: paintingImg,
+  concrete: concreteImg,
+  drywall: drywallImg,
+  flooring: flooringImg,
+  renovations: renovationsImg,
+  demolition: demolitionImg,
+  carpentry: carpentryImg,
+  "doors-windows": doorsWindowsImg,
+  siding: sidingImg,
+  decks: decksImg,
+  cleaning: cleaningImg,
+};
+
 interface ServiceData {
   title: string;
   metaTitle: string;
@@ -477,23 +507,37 @@ export default function ServicePage() {
 
   return (
     <Layout>
-      {/* Hero */}
-      <section className="gradient-primary py-16 md:py-24">
-        <div className="container-custom">
-          <nav className="mb-4 text-sm text-primary-foreground/60">
-            <Link to="/" className="hover:text-primary-foreground">
+      {/* Hero with Image */}
+      <section className="relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={serviceImages[slug]}
+            alt={service.title}
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+        </div>
+        
+        {/* Content */}
+        <div className="container-custom relative z-10 py-20 md:py-32">
+          <nav className="mb-4 text-sm text-white/70">
+            <Link to="/" className="hover:text-white transition-colors">
               Home
             </Link>
             <span className="mx-2">/</span>
-            <Link to="/services" className="hover:text-primary-foreground">
+            <Link to="/services" className="hover:text-white transition-colors">
               Services
             </Link>
             <span className="mx-2">/</span>
-            <span className="text-primary-foreground">{service.title}</span>
+            <span className="text-white">{service.title}</span>
           </nav>
-          <h1 className="font-heading text-3xl font-bold text-primary-foreground md:text-5xl">
+          <h1 className="font-heading text-3xl font-bold text-white md:text-5xl lg:text-6xl max-w-3xl">
             {service.metaTitle}
           </h1>
+          <p className="mt-4 text-lg text-white/80 max-w-2xl">
+            {service.description[0].substring(0, 150)}...
+          </p>
         </div>
       </section>
 
