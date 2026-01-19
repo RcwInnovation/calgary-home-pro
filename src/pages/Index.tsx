@@ -18,6 +18,23 @@ import {
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
+// Project images
+import kitchenProject from "@/assets/projects/kitchen-renovation.jpg";
+import livingRoomProject from "@/assets/projects/living-room-painting.jpg";
+import deckProject from "@/assets/projects/deck-installation.jpg";
+import basementProject from "@/assets/projects/basement-renovation.jpg";
+import bathroomProject from "@/assets/projects/bathroom-renovation.jpg";
+import sidingProject from "@/assets/projects/siding-exterior.jpg";
+
+const recentProjects = [
+  { image: kitchenProject, title: "Kitchen Renovation", location: "Calgary, AB" },
+  { image: livingRoomProject, title: "Interior Painting", location: "Airdrie, AB" },
+  { image: deckProject, title: "Deck & Fence", location: "Calgary, AB" },
+  { image: basementProject, title: "Basement Finishing", location: "Cochrane, AB" },
+  { image: bathroomProject, title: "Bathroom Remodel", location: "Calgary, AB" },
+  { image: sidingProject, title: "Siding Installation", location: "Okotoks, AB" },
+];
+
 const services = [
   { name: "Restoration Services", icon: Construction, href: "/services/restoration" },
   { name: "Painting", icon: Paintbrush, href: "/services/painting" },
@@ -225,13 +242,20 @@ export default function Index() {
             </p>
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
+            {recentProjects.map((project, i) => (
               <div
                 key={i}
-                className="aspect-[4/3] overflow-hidden rounded-xl bg-muted"
+                className="group relative aspect-[4/3] overflow-hidden rounded-xl"
               >
-                <div className="flex h-full items-center justify-center text-muted-foreground">
-                  Project {i}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-background translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+                  <h3 className="font-heading text-lg font-semibold">{project.title}</h3>
+                  <p className="text-sm text-background/80">{project.location}</p>
                 </div>
               </div>
             ))}
