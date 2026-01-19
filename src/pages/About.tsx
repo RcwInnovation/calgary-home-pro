@@ -1,29 +1,39 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { CheckCircle, Users, Award, Clock, Shield } from "lucide-react";
+import { CheckCircle, Users, Award, Clock, Shield, Target, Heart, Briefcase } from "lucide-react";
+import clientLogos from "@/assets/clients-logos.png";
 
-const values = [
-  {
-    icon: Shield,
-    title: "Quality Workmanship",
-    description: "We never cut corners. Every project receives our full attention and expertise.",
-  },
+const principles = [
   {
     icon: Clock,
-    title: "Clear Communication",
-    description: "We keep you informed at every step, with transparent timelines and pricing.",
+    title: "Clear Planning",
+    description: "Schedules tailored to each property and project",
   },
   {
     icon: Users,
-    title: "Customer Focus",
-    description: "Your satisfaction is our priority. We listen, adapt, and deliver on our promises.",
+    title: "Open Communication",
+    description: "Transparent communication with clients at every stage",
   },
   {
-    icon: Award,
-    title: "Professional Standards",
-    description: "Clean, safe, and organized work sites. We respect your property like it's our own.",
+    icon: Shield,
+    title: "Quality Standards",
+    description: "Consistent quality and safety, no matter the job size",
   },
+];
+
+const services = [
+  "Cleaning services",
+  "Painting",
+  "Drywall and taping",
+  "Flooring installation",
+  "Finish carpentry",
+  "Concrete services",
+  "Light demolition",
+  "Doors and windows",
+  "Decks and fences",
+  "Siding and exterior work",
+  "Complete renovations and remodeling",
 ];
 
 export default function About() {
@@ -33,10 +43,10 @@ export default function About() {
       <section className="gradient-primary py-16 md:py-24">
         <div className="container-custom text-center">
           <h1 className="font-heading text-3xl font-bold text-primary-foreground md:text-5xl">
-            About Ninajean
+            About Ninajean Services
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-primary-foreground/80">
-            Your trusted partner for maintenance and renovation services in Calgary, Alberta.
+            Integrated cleaning, maintenance, restoration, and renovation services in Calgary.
           </p>
         </div>
       </section>
@@ -46,97 +56,184 @@ export default function About() {
         <div className="container-custom">
           <div className="mx-auto max-w-3xl">
             <h2 className="font-heading text-3xl font-bold md:text-4xl">
-              Calgary's Reliable Renovation Partner
+              Who We Are
             </h2>
             <div className="mt-6 space-y-4 text-body leading-relaxed">
               <p>
-                Ninajean Maintenance & Renovation is a Calgary-based company dedicated to delivering
-                high-quality maintenance and renovation services for residential and small commercial
-                clients throughout the city and surrounding areas.
+                Ninajean Services is a Calgary-based company delivering integrated cleaning, 
+                maintenance, restoration, and renovation services for residential and small 
+                commercial properties throughout the city and surrounding areas.
               </p>
               <p>
-                We understand that your home or business is more than just a building—it's where
-                you live, work, and create memories. That's why we approach every project with care,
-                professionalism, and attention to detail.
+                We understand that a home or business is more than just a building—it's where 
+                people live, work, and invest their resources. That's why we approach every 
+                project with care, professionalism, and attention to detail, whether it involves 
+                routine cleaning, property maintenance, structural work, or full renovations.
               </p>
               <p>
-                Our team brings experience across a wide range of services, from painting and drywall
-                to complete renovations and exterior work. We're committed to clear communication,
-                quality workmanship, and leaving every job site clean and safe.
-              </p>
-              <p>
-                Whether you need a small repair or a major renovation, we're here to help you
-                improve your property with reliable service and lasting results.
+                By offering a wide range of services under one company, we help our clients 
+                simplify projects, reduce coordination challenges, and ensure consistent quality 
+                from start to finish.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values */}
+      {/* Philosophy */}
       <section className="section-padding bg-section-alt">
         <div className="container-custom">
           <div className="text-center">
-            <h2 className="font-heading text-3xl font-bold md:text-4xl">What We Stand For</h2>
+            <h2 className="font-heading text-3xl font-bold md:text-4xl">Our Philosophy</h2>
             <p className="mx-auto mt-4 max-w-2xl text-body">
-              Our values guide everything we do, from the first phone call to the final walk-through.
+              Our work is guided by three core principles that form the foundation of reliable 
+              service and long-term client trust.
             </p>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {values.map((value) => (
-              <div key={value.title} className="card-elevated p-6 text-center">
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {principles.map((principle) => (
+              <div key={principle.title} className="card-elevated p-6 text-center">
                 <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-                  <value.icon className="h-7 w-7 text-primary" />
+                  <principle.icon className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="font-heading text-lg font-semibold">{value.title}</h3>
-                <p className="mt-2 text-sm text-body">{value.description}</p>
+                <h3 className="font-heading text-lg font-semibold">{principle.title}</h3>
+                <p className="mt-2 text-sm text-body">{principle.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Services Approach */}
       <section className="section-padding">
         <div className="container-custom">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
+              <div className="mb-4 flex items-center gap-2">
+                <Briefcase className="h-6 w-6 text-primary" />
+                <span className="text-sm font-medium uppercase tracking-wider text-primary">
+                  Our Expertise
+                </span>
+              </div>
               <h2 className="font-heading text-3xl font-bold md:text-4xl">
-                Why Calgary Chooses Ninajean
+                Our Services Approach
               </h2>
-              <ul className="mt-6 space-y-4">
-                {[
-                  "Local Calgary-based company with deep community roots",
-                  "Comprehensive services—one team for all your renovation needs",
-                  "Clear, upfront estimates with no hidden fees",
-                  "Licensed, insured, and committed to safety",
-                  "Experience with Calgary's climate and building codes",
-                  "Responsive communication and reliable scheduling",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-body">{item}</span>
-                  </li>
+              <p className="mt-4 text-body">
+                Our team has experience across a broad scope of services. Each project is managed 
+                with a practical, hands-on approach to ensure efficiency, clean job sites, and 
+                durable results.
+              </p>
+              <div className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
+                {services.map((service) => (
+                  <div key={service} className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 shrink-0 text-primary" />
+                    <span className="text-sm text-body">{service}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-muted">
-              <div className="flex h-full items-center justify-center text-muted-foreground">
-                Team Photo Placeholder
+            <div className="order-first lg:order-last">
+              <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 p-8 flex items-center justify-center">
+                <div className="text-center">
+                  <Award className="mx-auto h-16 w-16 text-primary" />
+                  <p className="mt-4 font-heading text-xl font-semibold">Quality First</p>
+                  <p className="mt-2 text-sm text-body">Consistent standards on every project</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Team */}
       <section className="section-padding bg-section-alt">
+        <div className="container-custom">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="mb-4 flex items-center justify-center gap-2">
+              <Users className="h-6 w-6 text-primary" />
+              <span className="text-sm font-medium uppercase tracking-wider text-primary">
+                Leadership
+              </span>
+            </div>
+            <h2 className="font-heading text-3xl font-bold md:text-4xl">Our Team</h2>
+            <div className="mt-6 space-y-4 text-body leading-relaxed">
+              <p>
+                Ninajean Services is owned and operated by <strong>Ms. Tania Lopez</strong>, who 
+                oversees operations and client relationships. With a strong background in accounting 
+                and operations management, she brings a structured, detail-oriented approach to 
+                every project.
+              </p>
+              <p>
+                Ms. Lopez works closely with a trained and adaptable team of professionals who 
+                follow established procedures and quality standards. This hands-on leadership 
+                ensures consistency, accountability, and a high level of care for every client.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="mb-4 flex items-center justify-center gap-2">
+              <Target className="h-6 w-6 text-primary" />
+              <span className="text-sm font-medium uppercase tracking-wider text-primary">
+                Our Purpose
+              </span>
+            </div>
+            <h2 className="font-heading text-3xl font-bold md:text-4xl">Our Mission</h2>
+            <p className="mt-6 text-lg text-body leading-relaxed">
+              Our mission is to create safe, comfortable, and well-maintained spaces through 
+              reliable cleaning, maintenance, restoration, and renovation services. We prioritize 
+              customer satisfaction by combining flexible scheduling, clear processes, and 
+              consistent workmanship.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Clients */}
+      <section className="section-padding bg-section-alt">
+        <div className="container-custom">
+          <div className="text-center">
+            <div className="mb-4 flex items-center justify-center gap-2">
+              <Heart className="h-6 w-6 text-primary" />
+              <span className="text-sm font-medium uppercase tracking-wider text-primary">
+                Trusted By
+              </span>
+            </div>
+            <h2 className="font-heading text-3xl font-bold md:text-4xl">Our Clients</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-body">
+              We serve a diverse range of residential and small commercial clients across Calgary. 
+              We treat every client and property with the same level of diligence, care, and 
+              respect—regardless of project size.
+            </p>
+          </div>
+          
+          {/* Client Logos */}
+          <div className="mt-12 flex justify-center">
+            <div className="rounded-2xl bg-white p-8 shadow-sm">
+              <img 
+                src={clientLogos} 
+                alt="Our trusted clients including Cité des Rocheuses, Boston Pizza, The Metropolitan, Aragon Massage, Subaru, and Capitol Chevrolet" 
+                className="max-w-full h-auto md:max-w-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-padding">
         <div className="container-custom text-center">
           <h2 className="font-heading text-3xl font-bold md:text-4xl">
             Ready to Start Your Project?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-body">
-            Contact us today for a free, no-obligation estimate on your maintenance or renovation project.
+            Contact us today for a free, no-obligation estimate on your cleaning, maintenance, 
+            or renovation project.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button size="lg" asChild>
