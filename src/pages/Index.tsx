@@ -164,7 +164,6 @@ export default function Index() {
               src={slide.image}
               alt=""
               loading={index === 0 ? "eager" : "lazy"}
-              fetchPriority={index === 0 ? "high" : "auto"}
               width={index === 2 ? 1536 : undefined}
               height={index === 2 ? 1024 : undefined}
               className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${index === activeSlide ? "scale-100 opacity-100" : "scale-105 opacity-0"}`}
@@ -174,7 +173,7 @@ export default function Index() {
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-foreground/50 to-transparent" />
         </div>
 
-        <div className="container-custom relative z-10 flex min-h-[650px] items-center pb-32 pt-16 sm:min-h-[620px] sm:pb-28 lg:min-h-[700px]">
+        <div className="container-custom relative z-10 flex min-h-[650px] items-center pb-36 pt-16 sm:min-h-[620px] lg:min-h-[700px]">
           <div key={activeSlide} className="max-w-3xl animate-fade-in" aria-live="polite">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-background/20 bg-background/10 px-4 py-2 text-xs font-medium text-background backdrop-blur-sm sm:text-sm">
               <MapPin className="h-4 w-4 shrink-0 text-primary" />
@@ -197,7 +196,7 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="container-custom absolute inset-x-0 bottom-6 z-20 flex items-center justify-between gap-4">
+        <div className="container-custom absolute inset-x-0 bottom-24 z-20 flex items-center justify-center gap-6">
           <div className="flex items-center gap-2" role="group" aria-label="Choose a slide">
             {heroSlides.map((slide, index) => (
               <button
