@@ -10,6 +10,8 @@ const services = [
   { name: "Drywall & Taping", href: "/services/drywall" },
   { name: "Flooring Installation", href: "/services/flooring" },
   { name: "Renovations & Remodeling", href: "/services/renovations" },
+  { name: "Cleaning Services", href: "/services/cleaning" },
+  { name: "Snow Removal", href: "/services/snow-removal" },
 ];
 
 const quickLinks = [

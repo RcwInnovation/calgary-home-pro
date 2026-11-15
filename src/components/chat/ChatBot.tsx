@@ -22,6 +22,7 @@ const knowledgeBase = {
     "Siding & Exterior Work",
     "Decks & Fences",
     "Cleaning Services",
+    "Snow Removal",
   ],
   areas: ["Calgary", "Airdrie", "Cochrane", "Okotoks", "Chestermere"],
   contact: {

@@ -23,6 +23,7 @@ import doorsWindowsImg from "@/assets/services/doors-windows.jpg";
 import sidingImg from "@/assets/services/siding.jpg";
 import decksImg from "@/assets/services/decks.jpg";
 import cleaningImg from "@/assets/services/cleaning.jpg";
+import snowRemovalImg from "@/assets/services/snow-removal.jpg";
 
 // Service image mapping
 const serviceImages: Record<string, string> = {

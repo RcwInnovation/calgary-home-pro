@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { ChatBot } from "@/components/chat/ChatBot";
+import { QuickActions } from "@/components/QuickActions";
 
 interface LayoutProps {
   children: ReactNode;

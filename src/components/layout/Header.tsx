@@ -26,6 +26,7 @@ const services = [
   { name: "Siding & Exterior", href: "/services/siding" },
   { name: "Decks & Fences", href: "/services/decks-fences" },
   { name: "Cleaning Services", href: "/services/cleaning" },
+  { name: "Snow Removal", href: "/services/snow-removal" },
 ];
 
 const navigation = [
