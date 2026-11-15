@@ -459,6 +459,43 @@ const servicesData: Record<string, ServiceData> = {
       },
     ],
   },
+  "snow-removal": {
+    title: "Snow Removal",
+    metaTitle: "Snow Removal Services in Calgary",
+    description: [
+      "Keep your Calgary property safe and accessible throughout winter with professional snow removal from Ninajean. We clear snow from residential driveways, walkways, entrances, and small commercial properties so you can move around with confidence.",
+      "Our team provides practical snow clearing tailored to your property, including shoveling and snow-blowing for areas large and small. Choose one-time service after a snowfall or ask about recurring and seasonal options.",
+      "We understand how quickly Calgary weather can change. We work with you to establish clear service expectations, priority areas, and scheduling based on your property's needs.",
+    ],
+    includes: [
+      "Driveway snow clearing",
+      "Walkway and sidewalk shoveling",
+      "Entrance and step clearing",
+      "Small commercial parking areas",
+      "One-time and seasonal service options",
+      "Ice-control and de-icing options",
+    ],
+    bestFor: [
+      "Homeowners needing reliable winter maintenance",
+      "Seniors or residents with limited mobility",
+      "Landlords and property managers",
+      "Small businesses keeping entrances accessible",
+    ],
+    faqs: [
+      {
+        question: "Do you offer seasonal snow removal plans?",
+        answer: "Yes. We offer one-time clearing as well as recurring and seasonal service options. Contact us to discuss your property, preferred service frequency, and a clear estimate.",
+      },
+      {
+        question: "Which areas do you clear?",
+        answer: "We can clear driveways, walkways, sidewalks, steps, entrances, and small commercial parking areas. We'll confirm the exact priority areas with you before service begins.",
+      },
+      {
+        question: "Can you help with ice as well as snow?",
+        answer: "Yes, ice-control and de-icing options can be included based on your property's needs. Let us know about problem areas when you request your estimate.",
+      },
+    ],
+  },
   cleaning: {
     title: "Cleaning Services",
     metaTitle: "Cleaning Services in Calgary",
@@ -518,7 +555,7 @@ export default function ServicePage() {
             alt={service.title}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/40" />
         </div>
         
         {/* Content */}

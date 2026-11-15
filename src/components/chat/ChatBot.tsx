@@ -104,7 +104,8 @@ const getResponse = (message: string): string => {
   // Cleaning
   if (
     lowerMessage.includes("clean") ||
-    lowerMessage.includes("limpieza")
+    lowerMessage.includes("limpieza") ||
+    lowerMessage.includes("cleaning")
   ) {
     return "We offer professional cleaning services including regular house cleaning, deep cleaning, move-in/move-out cleaning, and post-construction cleanup for both residential and commercial properties. Request a free estimate today!";
   }

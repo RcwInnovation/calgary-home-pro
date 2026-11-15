@@ -157,7 +157,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="border-t border-border pb-4 xl:hidden">
+          <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border pb-4 xl:hidden">
             <nav className="mt-4 space-y-1">
               {navigation.map((item) =>
                 item.hasDropdown ? (
