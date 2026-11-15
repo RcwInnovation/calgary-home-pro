@@ -6,6 +6,14 @@ import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
 export default function Contact() {
   return (
     <Layout>
+      <Helmet>
+        <title>Contact RCW Integrated Solutions | Free Calgary Estimates</title>
+        <meta name="description" content="Contact RCW Integrated Solutions for a free property maintenance, renovation, cleaning or snow removal estimate in Calgary and surrounding areas." />
+        <link rel="canonical" href="/contact" />
+        <meta property="og:title" content="Contact RCW Integrated Solutions" />
+        <meta property="og:description" content="Tell us about your property project and request a free estimate." />
+        <meta property="og:url" content="/contact" />
+      </Helmet>
       <section className="gradient-primary py-12 sm:py-16 md:py-20">
         <div className="container-custom text-center">
           <h1 className="font-heading text-3xl font-bold text-primary-foreground md:text-5xl">Contact RCW Integrated Solutions</h1>

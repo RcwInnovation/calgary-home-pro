@@ -56,6 +56,14 @@ const services = [
 export default function ServiceAreas() {
   return (
     <Layout>
+      <Helmet>
+        <title>Calgary & Surrounding Service Areas | RCW Integrated Solutions</title>
+        <meta name="description" content="RCW Integrated Solutions serves Calgary, Airdrie, Cochrane, Okotoks, Chestermere and nearby communities with integrated property services." />
+        <link rel="canonical" href="/service-areas" />
+        <meta property="og:title" content="Property Service Areas Near Calgary | RCW Integrated Solutions" />
+        <meta property="og:description" content="Local property services across Calgary and surrounding communities." />
+        <meta property="og:url" content="/service-areas" />
+      </Helmet>
       {/* Hero */}
       <section className="gradient-primary py-16 md:py-24">
         <div className="container-custom text-center">
