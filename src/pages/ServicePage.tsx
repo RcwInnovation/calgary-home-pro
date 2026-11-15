@@ -575,7 +575,7 @@ export default function ServicePage() {
             {service.metaTitle}
           </h1>
           <p className="mt-4 text-lg text-background/80 max-w-2xl">
-            {service.description[0].substring(0, 150)}...
+            {service.description[0]}
           </p>
         </div>
       </section>

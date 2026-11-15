@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/logo-cropped.png";
 
 const services = [
   { name: "Restoration Services", href: "/services/restoration" },

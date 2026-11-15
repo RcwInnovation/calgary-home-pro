@@ -11,7 +11,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/logo-cropped.png";
 
 const services = [
   { name: "Restoration Services", href: "/services/restoration" },
