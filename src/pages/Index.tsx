@@ -29,7 +29,9 @@ import {
 import { Layout } from "@/components/layout/Layout";
 import { EstimateForm } from "@/components/forms/EstimateForm";
 
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero/slide-renovation.jpg";
+import heroCleaning from "@/assets/hero/slide-cleaning.jpg";
+import heroSnow from "@/assets/hero/slide-snow.jpg";
 import restorationImg from "@/assets/services/restoration.jpg";
 import paintingImg from "@/assets/services/painting.jpg";
 import concreteImg from "@/assets/services/concrete.jpg";
@@ -59,13 +61,13 @@ const heroSlides = [
     description: "Reliable, high-quality construction and renovation solutions for homes and small businesses.",
   },
   {
-    image: cleaningImg,
+    image: heroCleaning,
     eyebrow: "Residential & Commercial Cleaning",
     title: "A Cleaner, Healthier Space Without the Hassle",
     description: "Detail-oriented cleaning, deep cleaning, move-out cleaning and post-construction cleanup tailored to your property.",
   },
   {
-    image: snowRemovalImg,
+    image: heroSnow,
     eyebrow: "Calgary Winter Services",
     title: "Snow Removal That Keeps Your Property Safe & Accessible",
     description: "Dependable clearing for driveways, walkways and small commercial properties, with one-time and seasonal options.",

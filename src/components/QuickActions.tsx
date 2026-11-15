@@ -67,11 +67,11 @@ export function QuickActions() {
     setIsOpen(false);
   };
 
-  if (location.pathname === "/contact") return null;
+  
 
   return (
     <>
-      <div className="fixed bottom-4 left-4 z-40 sm:bottom-6 sm:left-6">
+      {location.pathname !== "/contact" && (<div className="fixed bottom-4 left-4 z-40 hidden sm:bottom-6 sm:left-6 md:block">
         {isOpen && (
           <div
             id="quick-contact-actions"
@@ -120,7 +120,38 @@ export function QuickActions() {
           {isOpen ? <X className="h-5 w-5" /> : <Plus className="h-5 w-5" />}
           {isOpen ? "Close" : "Contact"}
         </button>
-      </div>
+      </div>)}
+
+      <nav
+        aria-label="Quick actions"
+        className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_24px_-12px_hsl(var(--foreground)/0.25)] backdrop-blur md:hidden"
+      >
+        <div className="grid grid-cols-4 gap-1 px-2 py-2">
+          <a href="tel:+14031234567" className="flex flex-col items-center justify-center gap-1 rounded-lg py-1.5 text-[11px] font-semibold text-foreground active:bg-muted">
+            <Phone className="h-5 w-5 text-primary" />Call
+          </a>
+          <Link to="/contact" className="col-span-2 flex items-center justify-center gap-2 rounded-xl bg-primary px-2 text-sm font-bold text-primary-foreground shadow-md active:scale-95">
+            <ArrowRight className="h-4 w-4" />Free Estimate
+          </Link>
+          {isInstalled ? (
+            <a href="mailto:info@rcwintegratedsolutions.com?subject=Free%20Estimate%20Request" className="flex flex-col items-center justify-center gap-1 rounded-lg py-1.5 text-[11px] font-semibold text-foreground active:bg-muted">
+              <Mail className="h-5 w-5 text-primary" />Email
+            </a>
+          ) : (
+            <button type="button" onClick={() => setIsOpen((o) => !o)} aria-expanded={isOpen} aria-controls="quick-contact-actions-mobile" className="flex flex-col items-center justify-center gap-1 rounded-lg py-1.5 text-[11px] font-semibold text-foreground active:bg-muted">
+              {isOpen ? <X className="h-5 w-5 text-primary" /> : <Plus className="h-5 w-5 text-primary" />}More
+            </button>
+          )}
+        </div>
+        {isOpen && (
+          <div id="quick-contact-actions-mobile" className="card-elevated absolute bottom-full left-3 right-20 mb-3 grid grid-cols-1 gap-2 p-3">
+            <Button variant="outline" className="h-11" asChild>
+              <a href="mailto:info@rcwintegratedsolutions.com?subject=Free%20Estimate%20Request"><Mail className="h-4 w-4" />Email</a>
+            </Button>
+            <Button variant="secondary" className="h-11" onClick={handleInstall}><Download className="h-4 w-4" />Install App</Button>
+          </div>
+        )}
+      </nav>
 
       <Dialog open={installHelpOpen} onOpenChange={setInstallHelpOpen}>
         <DialogContent className="w-[calc(100vw-2rem)] max-w-md rounded-2xl">
