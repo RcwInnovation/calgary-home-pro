@@ -29,7 +29,9 @@ import {
 import { Layout } from "@/components/layout/Layout";
 import { EstimateForm } from "@/components/forms/EstimateForm";
 
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero/slide-renovation.jpg";
+import heroCleaning from "@/assets/hero/slide-cleaning.jpg";
+import heroSnow from "@/assets/hero/slide-snow.jpg";
 import restorationImg from "@/assets/services/restoration.jpg";
 import paintingImg from "@/assets/services/painting.jpg";
 import concreteImg from "@/assets/services/concrete.jpg";
