@@ -63,7 +63,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex lg:items-center lg:gap-1">
+          <nav className="hidden xl:flex xl:items-center xl:gap-1">
             <NavigationMenu>
               <NavigationMenuList>
                 {navigation.map((item) =>
@@ -126,7 +126,7 @@ export function Header() {
           </nav>
 
           {/* Desktop CTAs */}
-          <div className="hidden items-center gap-3 lg:flex">
+          <div className="hidden items-center gap-3 xl:flex">
             <Button variant="ghost" size="sm" asChild>
               <a href="tel:+14031234567" className="gap-2">
                 <Phone className="h-4 w-4" />
@@ -139,7 +139,7 @@ export function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-2 xl:hidden">
             <Button variant="default" size="sm" asChild>
               <a href="tel:+14031234567">
                 <Phone className="h-4 w-4" />
@@ -157,7 +157,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="border-t border-border pb-4 lg:hidden">
+          <div className="border-t border-border pb-4 xl:hidden">
             <nav className="mt-4 space-y-1">
               {navigation.map((item) =>
                 item.hasDropdown ? (

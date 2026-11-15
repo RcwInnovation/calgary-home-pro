@@ -92,6 +92,15 @@ const getResponse = (message: string): string => {
     return "We build custom decks, fences, and outdoor living spaces. From design to construction, we create beautiful and durable outdoor areas for your property.";
   }
 
+  // Snow removal
+  if (
+    lowerMessage.includes("snow") ||
+    lowerMessage.includes("nieve") ||
+    lowerMessage.includes("winter")
+  ) {
+    return "We provide snow removal for residential driveways, walkways, entrances, and small commercial properties in Calgary and surrounding areas. Ask about one-time clearing or seasonal service and request a free estimate!";
+  }
+
   // Cleaning
   if (
     lowerMessage.includes("clean") ||

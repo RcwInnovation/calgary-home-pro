@@ -14,6 +14,7 @@ export function Layout({ children }: LayoutProps) {
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
+      <QuickActions />
       <ChatBot />
     </div>
   );

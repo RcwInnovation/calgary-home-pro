@@ -91,6 +91,12 @@ const services = [
     href: "/services/cleaning",
     description: "Professional residential and commercial cleaning services for spotless spaces.",
   },
+  {
+    name: "Snow Removal",
+    image: snowRemovalImg,
+    href: "/services/snow-removal",
+    description: "Reliable snow clearing for driveways, walkways, entrances, and small commercial properties.",
+  },
 ];
 
 export default function Services() {

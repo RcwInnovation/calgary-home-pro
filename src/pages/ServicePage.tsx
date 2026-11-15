@@ -39,6 +39,7 @@ const serviceImages: Record<string, string> = {
   siding: sidingImg,
   decks: decksImg,
   cleaning: cleaningImg,
+  "snow-removal": snowRemovalImg,
 };
 
 interface ServiceData {

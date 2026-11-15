@@ -78,7 +78,7 @@ export function Footer() {
               <img 
                 src={logo} 
                 alt="Nina Jean Maintenance Renovation Ltd" 
-                className="h-16 w-auto bg-white rounded-lg p-1"
+                className="h-16 w-auto rounded-lg bg-background p-1"
               />
             </Link>
             <p className="mt-4 text-sm text-background/70">
