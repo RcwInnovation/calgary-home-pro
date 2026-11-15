@@ -138,6 +138,14 @@ export default function Index() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>RCW Integrated Solutions | Property Services in Calgary</title>
+        <meta name="description" content="Integrated maintenance, renovation, restoration, cleaning and snow removal for Calgary homes and small businesses. Request a free estimate." />
+        <link rel="canonical" href="/" />
+        <meta property="og:title" content="RCW Integrated Solutions | Calgary Property Services" />
+        <meta property="og:description" content="One local team for maintenance, renovation, restoration, cleaning and snow removal." />
+        <meta property="og:url" content="/" />
+      </Helmet>
       <section
         className="relative min-h-[650px] overflow-hidden sm:min-h-[620px] lg:min-h-[700px]"
         aria-roledescription="carousel"

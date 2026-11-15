@@ -282,7 +282,7 @@ export default function ServicePage() {
     description: service.metaDescription,
     serviceType: service.title,
     provider: { "@type": "Organization", name: "RCW Integrated Solutions" },
-    areaServed: serviceAreas.map((area) => ({ "@type": "City", name: area })),
+    areaServed: serviceAreas.map((area) => ({ "@type": "Place", name: area })),
     url: canonical,
   };
   const breadcrumbSchema = {

@@ -223,7 +223,7 @@ export function ChatBot() {
             </div>
             <div className="flex-1">
               <h3 className="text-sm font-semibold text-primary-foreground sm:text-base">
-                Ninajean Assistant
+                RCW Solutions Assistant
               </h3>
               <p className="text-xs text-primary-foreground/70">
                 We typically reply instantly
