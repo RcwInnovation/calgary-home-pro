@@ -140,15 +140,17 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 xl:hidden">
-            <Button variant="default" size="sm" asChild>
+            <Button variant="default" size="sm" className="h-11 w-11" asChild>
               <a href="tel:+14031234567" aria-label="Call Ninajean now">
                 <Phone className="h-4 w-4" />
               </a>
             </Button>
             <button
               type="button"
-              className="rounded-md p-2 text-foreground hover:bg-muted"
+              className="flex h-11 w-11 items-center justify-center rounded-md text-foreground hover:bg-muted"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>

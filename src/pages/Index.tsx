@@ -204,10 +204,12 @@ export default function Index() {
                 key={slide.title}
                 type="button"
                 onClick={() => goToSlide(index)}
-                className={`h-2.5 rounded-full transition-all ${index === activeSlide ? "w-9 bg-primary" : "w-2.5 bg-background/50 hover:bg-background/80"}`}
+                className="flex h-11 w-11 items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background"
                 aria-label={`Go to slide ${index + 1}: ${slide.eyebrow}`}
                 aria-current={index === activeSlide ? "true" : undefined}
-              />
+              >
+                <span className={`h-2.5 rounded-full transition-all ${index === activeSlide ? "w-9 bg-primary" : "w-2.5 bg-background/50 group-hover:bg-background/80"}`} />
+              </button>
             ))}
             <span className="ml-2 text-xs font-medium text-background/70">0{activeSlide + 1} / 0{heroSlides.length}</span>
           </div>
