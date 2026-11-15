@@ -67,6 +67,8 @@ export function QuickActions() {
     setIsOpen(false);
   };
 
+  if (location.pathname === "/contact") return null;
+
   return (
     <>
       <div className="fixed bottom-4 left-4 z-40 sm:bottom-6 sm:left-6">
