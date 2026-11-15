@@ -144,7 +144,7 @@ export function QuickActions() {
           )}
         </div>
         {isOpen && (
-          <div id="quick-contact-actions-mobile" className="grid grid-cols-2 gap-2 border-t border-border px-3 py-3">
+          <div id="quick-contact-actions-mobile" className="card-elevated absolute bottom-full left-3 right-20 mb-3 grid grid-cols-1 gap-2 p-3">
             <Button variant="outline" className="h-11" asChild>
               <a href="mailto:info@rcwintegratedsolutions.com?subject=Free%20Estimate%20Request"><Mail className="h-4 w-4" />Email</a>
             </Button>
