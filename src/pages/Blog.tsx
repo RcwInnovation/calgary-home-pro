@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 
@@ -71,6 +72,14 @@ const formatDate = (dateString: string) => {
 const Blog = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Property Maintenance & Renovation Blog | RCW Integrated Solutions</title>
+        <meta name="description" content="Read practical property maintenance and renovation guides from RCW Integrated Solutions." />
+        <link rel="canonical" href="/blog" />
+        <meta property="og:title" content="RCW Integrated Solutions Blog" />
+        <meta property="og:description" content="Property maintenance and renovation guides." />
+        <meta property="og:url" content="/blog" />
+      </Helmet>
       {/* Hero Section */}
       <section className="gradient-primary py-16 md:py-24">
         <div className="container-custom">

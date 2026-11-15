@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -11,7 +11,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo-cropped.png";
+import emblem from "@/assets/rcw-emblem.png.asset.json";
 
 const services = [
   { name: "Restoration Services", href: "/services/restoration" },
@@ -50,57 +50,40 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/85">
       <div className="container-custom">
-        <div className="flex h-16 items-center justify-between md:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 shrink-0">
-            <img 
-              src={logo} 
-              alt="Nina Jean Maintenance Renovation Ltd" 
-              className="h-12 w-auto md:h-14"
-            />
+        <div className="flex h-16 items-center justify-between gap-2 md:h-20">
+          <Link to="/" className="flex min-w-0 shrink-0 items-center gap-2.5" aria-label="RCW Integrated Solutions home">
+            <img src={emblem.url} alt="RCW Integrated Solutions emblem" className="h-11 w-11 rounded-xl border border-border object-cover md:h-12 md:w-12" />
+            <span className="hidden min-[360px]:block">
+              <span className="block font-heading text-base font-bold leading-none text-foreground sm:text-lg">RCW</span>
+              <span className="mt-1 block text-[10px] font-semibold uppercase tracking-wide text-body sm:text-xs">Integrated Solutions</span>
+            </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden xl:flex xl:items-center xl:gap-1">
+          <nav className="hidden xl:flex xl:items-center xl:gap-1" aria-label="Main navigation">
             <NavigationMenu>
               <NavigationMenuList>
                 {navigation.map((item) =>
                   item.hasDropdown ? (
                     <NavigationMenuItem key={item.name}>
-                      <NavigationMenuTrigger
-                        className={cn(
-                          "bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:text-primary",
-                          isActive(item.href) && "text-primary"
-                        )}
-                      >
+                      <NavigationMenuTrigger className={cn("bg-transparent px-3 py-2 text-sm font-medium transition-colors hover:text-primary", isActive(item.href) && "text-primary")}>
                         {item.name}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <ul className="grid w-[400px] gap-1 p-4 md:w-[500px] md:grid-cols-2">
                           <li className="col-span-2 mb-2">
                             <NavigationMenuLink asChild>
-                              <Link
-                                to="/services"
-                                className="block rounded-md bg-secondary p-4 font-medium hover:bg-secondary/80"
-                              >
+                              <Link to="/services" className="block rounded-md bg-secondary p-4 font-medium hover:bg-secondary/80">
                                 <span className="font-heading text-lg">All Services</span>
-                                <p className="mt-1 text-sm text-muted-foreground">
-                                  View our complete range of services
-                                </p>
+                                <p className="mt-1 text-sm text-muted-foreground">Compare our complete range of property services</p>
                               </Link>
                             </NavigationMenuLink>
                           </li>
                           {services.map((service) => (
                             <li key={service.name}>
                               <NavigationMenuLink asChild>
-                                <Link
-                                  to={service.href}
-                                  className="block rounded-md px-3 py-2 text-sm hover:bg-muted"
-                                >
-                                  {service.name}
-                                </Link>
+                                <Link to={service.href} className="block rounded-md px-3 py-2 text-sm hover:bg-muted">{service.name}</Link>
                               </NavigationMenuLink>
                             </li>
                           ))}
@@ -109,41 +92,26 @@ export function Header() {
                     </NavigationMenuItem>
                   ) : (
                     <NavigationMenuItem key={item.name}>
-                      <Link
-                        to={item.href}
-                        className={cn(
-                          "block px-4 py-2 text-sm font-medium transition-colors hover:text-primary",
-                          isActive(item.href) && "text-primary"
-                        )}
-                      >
+                      <Link to={item.href} className={cn("block px-3 py-2 text-sm font-medium transition-colors hover:text-primary", isActive(item.href) && "text-primary")}>
                         {item.name}
                       </Link>
                     </NavigationMenuItem>
-                  )
+                  ),
                 )}
               </NavigationMenuList>
             </NavigationMenu>
           </nav>
 
-          {/* Desktop CTAs */}
           <div className="hidden items-center gap-3 xl:flex">
             <Button variant="ghost" size="sm" asChild>
-              <a href="tel:+14031234567" className="gap-2">
-                <Phone className="h-4 w-4" />
-                <span className="hidden xl:inline">Call Now</span>
-              </a>
+              <a href="tel:+14031234567" className="gap-2"><Phone className="h-4 w-4" />Call Now</a>
             </Button>
-            <Button size="sm" asChild>
-              <Link to="/contact">Get a Free Estimate</Link>
-            </Button>
+            <Button size="sm" asChild><Link to="/contact">Get a Free Estimate</Link></Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 xl:hidden">
+          <div className="flex shrink-0 items-center gap-2 xl:hidden">
             <Button variant="default" size="sm" className="h-11 w-11" asChild>
-              <a href="tel:+14031234567" aria-label="Call Ninajean now">
-                <Phone className="h-4 w-4" />
-              </a>
+              <a href="tel:+14031234567" aria-label="Call RCW Integrated Solutions now"><Phone className="h-4 w-4" /></a>
             </Button>
             <button
               type="button"
@@ -157,68 +125,36 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border pb-4 xl:hidden">
-            <nav className="mt-4 space-y-1">
+            <nav className="mt-4 space-y-1" aria-label="Mobile navigation">
               {navigation.map((item) =>
                 item.hasDropdown ? (
                   <div key={item.name}>
                     <button
                       onClick={() => setServicesOpen(!servicesOpen)}
-                      className={cn(
-                        "flex w-full items-center justify-between rounded-md px-4 py-3 text-base font-medium hover:bg-muted",
-                        isActive(item.href) && "text-primary"
-                      )}
+                      className={cn("flex w-full items-center justify-between rounded-md px-4 py-3 text-base font-medium hover:bg-muted", isActive(item.href) && "text-primary")}
+                      aria-expanded={servicesOpen}
                     >
                       {item.name}
-                      <ChevronDown
-                        className={cn("h-5 w-5 transition-transform", servicesOpen && "rotate-180")}
-                      />
+                      <ChevronDown className={cn("h-5 w-5 transition-transform", servicesOpen && "rotate-180")} />
                     </button>
                     {servicesOpen && (
                       <div className="mt-1 space-y-1 pl-4">
-                        <Link
-                          to="/services"
-                          className="block rounded-md px-4 py-2 text-sm font-medium text-primary hover:bg-muted"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          All Services
-                        </Link>
+                        <Link to="/services" className="block rounded-md px-4 py-2 text-sm font-medium text-primary hover:bg-muted" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
                         {services.map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
-                            className="block rounded-md px-4 py-2 text-sm hover:bg-muted"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {service.name}
-                          </Link>
+                          <Link key={service.name} to={service.href} className="block rounded-md px-4 py-2 text-sm hover:bg-muted" onClick={() => setMobileMenuOpen(false)}>{service.name}</Link>
                         ))}
                       </div>
                     )}
                   </div>
                 ) : (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={cn(
-                      "block rounded-md px-4 py-3 text-base font-medium hover:bg-muted",
-                      isActive(item.href) && "text-primary"
-                    )}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                )
+                  <Link key={item.name} to={item.href} className={cn("block rounded-md px-4 py-3 text-base font-medium hover:bg-muted", isActive(item.href) && "text-primary")} onClick={() => setMobileMenuOpen(false)}>{item.name}</Link>
+                ),
               )}
             </nav>
             <div className="mt-4 px-4">
-              <Button className="w-full" size="lg" asChild>
-                <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                  Get a Free Estimate
-                </Link>
-              </Button>
+              <Button className="w-full" size="lg" asChild><Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Get a Free Estimate</Link></Button>
             </div>
           </div>
         )}

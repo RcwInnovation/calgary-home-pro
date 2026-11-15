@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { Calendar, Clock, ArrowLeft, ArrowRight, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -120,6 +121,11 @@ const BlogPost = () => {
   if (!post) {
     return (
       <Layout>
+        <Helmet>
+          <title>Article Not Found | RCW Integrated Solutions</title>
+          <meta name="description" content="The requested article could not be found. Explore the RCW Integrated Solutions blog." />
+          <meta name="robots" content="noindex" />
+        </Helmet>
         <div className="container-custom py-24 text-center">
           <h1 className="font-heading text-3xl font-bold">Artículo no encontrado</h1>
           <p className="mt-4 text-muted-foreground">El artículo que buscas no existe.</p>
@@ -142,6 +148,15 @@ const BlogPost = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>{post.title} | RCW Integrated Solutions</title>
+        <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={`/blog/${slug}`} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:url" content={`/blog/${slug}`} />
+        <meta property="og:type" content="article" />
+      </Helmet>
       {/* Hero Image */}
       <section className="relative h-[40vh] min-h-[300px] md:h-[50vh]">
         <img

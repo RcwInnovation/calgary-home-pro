@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -48,11 +49,21 @@ const services = [
   "Doors & Windows",
   "Siding & Exterior Work",
   "Decks & Fences",
+  "Cleaning Services",
+  "Snow Removal",
 ];
 
 export default function ServiceAreas() {
   return (
     <Layout>
+      <Helmet>
+        <title>Calgary & Surrounding Service Areas | RCW Integrated Solutions</title>
+        <meta name="description" content="RCW Integrated Solutions serves Calgary, Airdrie, Cochrane, Okotoks, Chestermere and nearby communities with integrated property services." />
+        <link rel="canonical" href="/service-areas" />
+        <meta property="og:title" content="Property Service Areas Near Calgary | RCW Integrated Solutions" />
+        <meta property="og:description" content="Local property services across Calgary and surrounding communities." />
+        <meta property="og:url" content="/service-areas" />
+      </Helmet>
       {/* Hero */}
       <section className="gradient-primary py-16 md:py-24">
         <div className="container-custom text-center">
@@ -73,7 +84,7 @@ export default function ServiceAreas() {
               Where We Work
             </h2>
             <p className="mt-4 text-body">
-              Ninajean Maintenance & Renovation proudly serves Calgary and nearby communities.
+              RCW Integrated Solutions proudly serves Calgary and nearby communities.
               As a local company, we understand the unique needs of our climate and building standards.
             </p>
           </div>

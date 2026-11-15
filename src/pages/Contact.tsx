@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { EstimateForm } from "@/components/forms/EstimateForm";
 import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
@@ -5,9 +6,17 @@ import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
 export default function Contact() {
   return (
     <Layout>
+      <Helmet>
+        <title>Contact RCW Integrated Solutions | Free Calgary Estimates</title>
+        <meta name="description" content="Contact RCW Integrated Solutions for a free property maintenance, renovation, cleaning or snow removal estimate in Calgary and surrounding areas." />
+        <link rel="canonical" href="/contact" />
+        <meta property="og:title" content="Contact RCW Integrated Solutions" />
+        <meta property="og:description" content="Tell us about your property project and request a free estimate." />
+        <meta property="og:url" content="/contact" />
+      </Helmet>
       <section className="gradient-primary py-12 sm:py-16 md:py-20">
         <div className="container-custom text-center">
-          <h1 className="font-heading text-3xl font-bold text-primary-foreground md:text-5xl">Contact Us</h1>
+          <h1 className="font-heading text-3xl font-bold text-primary-foreground md:text-5xl">Contact RCW Integrated Solutions</h1>
           <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/85 sm:text-lg">
             Get in touch for a free estimate or to discuss your project with our team.
           </p>
@@ -28,9 +37,9 @@ export default function Contact() {
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10"><Phone className="h-6 w-6 text-primary" /></div>
                   <div className="min-w-0"><h3 className="font-semibold">Phone</h3><p className="mt-1 break-words text-body group-hover:text-primary">(403) 123-4567</p></div>
                 </a>
-                <a href="mailto:info@ninajean.ca" className="card-elevated group flex items-start gap-4 p-5">
+                <a href="mailto:info@rcwintegratedsolutions.com" className="card-elevated group flex items-start gap-4 p-5">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10"><Mail className="h-6 w-6 text-primary" /></div>
-                  <div className="min-w-0"><h3 className="font-semibold">Email</h3><p className="mt-1 break-words text-body group-hover:text-primary">info@ninajean.ca</p></div>
+                  <div className="min-w-0"><h3 className="font-semibold">Email</h3><p className="mt-1 break-words text-body group-hover:text-primary">info@rcwintegratedsolutions.com</p></div>
                 </a>
                 <div className="flex items-start gap-4 rounded-xl bg-section-alt p-5">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10"><MapPin className="h-6 w-6 text-primary" /></div>

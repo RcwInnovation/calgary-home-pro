@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -89,6 +90,14 @@ export default function Projects() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Renovation & Maintenance Projects in Calgary | RCW</title>
+        <meta name="description" content="Explore RCW Integrated Solutions project photos featuring renovations, painting, concrete, decks, fences and flooring across the Calgary area." />
+        <link rel="canonical" href="/projects" />
+        <meta property="og:title" content="Calgary Property Projects | RCW Integrated Solutions" />
+        <meta property="og:description" content="View renovation and property improvement projects across Calgary and surrounding areas." />
+        <meta property="og:url" content="/projects" />
+      </Helmet>
       {/* Hero */}
       <section className="gradient-primary py-16 md:py-24">
         <div className="container-custom text-center">

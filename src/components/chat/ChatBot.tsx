@@ -27,7 +27,7 @@ const knowledgeBase = {
   areas: ["Calgary", "Airdrie", "Cochrane", "Okotoks", "Chestermere"],
   contact: {
     phone: "(403) 123-4567",
-    email: "info@ninajean.ca",
+    email: "info@rcwintegratedsolutions.com",
     hours: "Mon - Sat: 7:00 AM - 6:00 PM",
   },
 };
@@ -42,7 +42,7 @@ const getResponse = (message: string): string => {
     lowerMessage.includes("hey") ||
     lowerMessage.includes("hola")
   ) {
-    return "Hello! Welcome to Ninajean Maintenance & Renovation. How can I help you today? I can answer questions about our services, service areas, or help you get a free estimate.";
+    return "Hello! Welcome to RCW Integrated Solutions. How can I help you today? I can answer questions about our services, service areas, or help you get a free estimate.";
   }
 
   // Services
@@ -162,7 +162,7 @@ export function ChatBot() {
     {
       role: "assistant",
       content:
-        "Hi! 👋 Welcome to Ninajean Maintenance & Renovation. How can I help you today?",
+        "Hi! 👋 Welcome to RCW Integrated Solutions. How can I help you today?",
     },
   ]);
   const [input, setInput] = useState("");
@@ -223,7 +223,7 @@ export function ChatBot() {
             </div>
             <div className="flex-1">
               <h3 className="text-sm font-semibold text-primary-foreground sm:text-base">
-                Ninajean Assistant
+                RCW Solutions Assistant
               </h3>
               <p className="text-xs text-primary-foreground/70">
                 We typically reply instantly

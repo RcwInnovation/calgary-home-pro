@@ -94,7 +94,7 @@ export function QuickActions() {
                 </a>
               </Button>
               <Button variant="outline" className="h-12 w-full justify-start" asChild>
-                <a href="mailto:info@ninajean.ca?subject=Free%20Estimate%20Request">
+                <a href="mailto:info@rcwintegratedsolutions.com?subject=Free%20Estimate%20Request">
                   <Mail className="h-5 w-5" />
                   Send an Email
                 </a>
@@ -125,7 +125,7 @@ export function QuickActions() {
       <Dialog open={installHelpOpen} onOpenChange={setInstallHelpOpen}>
         <DialogContent className="w-[calc(100vw-2rem)] max-w-md rounded-2xl">
           <DialogHeader>
-            <DialogTitle>Install the Ninajean app</DialogTitle>
+            <DialogTitle>Install the RCW Integrated Solutions app</DialogTitle>
             <DialogDescription>
               Add this website to your home screen for quick access. No app store download is needed.
             </DialogDescription>

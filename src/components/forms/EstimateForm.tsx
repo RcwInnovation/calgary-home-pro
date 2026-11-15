@@ -294,7 +294,7 @@ export function EstimateForm({ preselectedService, compact = false }: EstimateFo
           <div className="rounded-xl bg-section-alt p-4">
             <div className="flex items-start gap-3">
               <Checkbox id="consent" data-field="consent" checked={consent} onCheckedChange={(checked) => { setConsent(checked === true); if (checked) setErrors((current) => ({ ...current, consent: undefined })); }} className="mt-0.5 h-5 w-5" aria-invalid={!!errors.consent} aria-describedby={errors.consent ? "consent-error" : undefined} />
-              <Label htmlFor="consent" className="text-sm font-normal leading-relaxed text-muted-foreground">I agree to be contacted by Ninajean Maintenance &amp; Renovation about this estimate request.</Label>
+              <Label htmlFor="consent" className="text-sm font-normal leading-relaxed text-muted-foreground">I agree to be contacted by RCW Integrated Solutions about this estimate request.</Label>
             </div>
             <div className="mt-2">{errorMessage("consent")}</div>
           </div>

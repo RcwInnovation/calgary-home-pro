@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -110,7 +111,7 @@ const processSteps = [
 ];
 
 const testimonials = [
-  { name: "Sarah M.", location: "Calgary, AB", text: "Ninajean did an amazing job on our basement renovation. Professional, on time, and the quality exceeded our expectations.", rating: 5 },
+  { name: "Sarah M.", location: "Calgary, AB", text: "RCW Integrated Solutions did an amazing job on our basement renovation. Professional, on time, and the quality exceeded our expectations.", rating: 5 },
   { name: "David L.", location: "Airdrie, AB", text: "We hired them for interior painting and drywall repair. The team was respectful, clean, and delivered excellent results.", rating: 5 },
   { name: "Jennifer K.", location: "Calgary, AB", text: "Great experience from estimate to completion. They built us a beautiful deck that we enjoy every summer.", rating: 5 },
 ];
@@ -137,10 +138,18 @@ export default function Index() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>RCW Integrated Solutions | Property Services in Calgary</title>
+        <meta name="description" content="Integrated maintenance, renovation, restoration, cleaning and snow removal for Calgary homes and small businesses. Request a free estimate." />
+        <link rel="canonical" href="/" />
+        <meta property="og:title" content="RCW Integrated Solutions | Calgary Property Services" />
+        <meta property="og:description" content="One local team for maintenance, renovation, restoration, cleaning and snow removal." />
+        <meta property="og:url" content="/" />
+      </Helmet>
       <section
         className="relative min-h-[650px] overflow-hidden sm:min-h-[620px] lg:min-h-[700px]"
         aria-roledescription="carousel"
-        aria-label="Ninajean services highlights"
+        aria-label="RCW Integrated Solutions services highlights"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onFocusCapture={() => setIsHovered(true)}
@@ -254,7 +263,7 @@ export default function Index() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="text-center">
-            <h2 className="font-heading text-3xl font-bold md:text-4xl">Why Choose Ninajean?</h2>
+            <h2 className="font-heading text-3xl font-bold md:text-4xl">Why Choose RCW Integrated Solutions?</h2>
             <p className="mx-auto mt-4 max-w-2xl text-body">We're committed to delivering exceptional quality and service on every project.</p>
           </div>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
