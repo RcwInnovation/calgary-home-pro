@@ -22,6 +22,7 @@ const knowledgeBase = {
     "Siding & Exterior Work",
     "Decks & Fences",
     "Cleaning Services",
+    "Snow Removal",
   ],
   areas: ["Calgary", "Airdrie", "Cochrane", "Okotoks", "Chestermere"],
   contact: {
@@ -91,10 +92,20 @@ const getResponse = (message: string): string => {
     return "We build custom decks, fences, and outdoor living spaces. From design to construction, we create beautiful and durable outdoor areas for your property.";
   }
 
+  // Snow removal
+  if (
+    lowerMessage.includes("snow") ||
+    lowerMessage.includes("nieve") ||
+    lowerMessage.includes("winter")
+  ) {
+    return "We provide snow removal for residential driveways, walkways, entrances, and small commercial properties in Calgary and surrounding areas. Ask about one-time clearing or seasonal service and request a free estimate!";
+  }
+
   // Cleaning
   if (
     lowerMessage.includes("clean") ||
-    lowerMessage.includes("limpieza")
+    lowerMessage.includes("limpieza") ||
+    lowerMessage.includes("cleaning")
   ) {
     return "We offer professional cleaning services including regular house cleaning, deep cleaning, move-in/move-out cleaning, and post-construction cleanup for both residential and commercial properties. Request a free estimate today!";
   }

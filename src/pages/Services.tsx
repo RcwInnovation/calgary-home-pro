@@ -16,6 +16,7 @@ import doorsWindowsImg from "@/assets/services/doors-windows.jpg";
 import sidingImg from "@/assets/services/siding.jpg";
 import decksImg from "@/assets/services/decks.jpg";
 import cleaningImg from "@/assets/services/cleaning.jpg";
+import snowRemovalImg from "@/assets/services/snow-removal.jpg";
 
 const services = [
   {
@@ -90,6 +91,12 @@ const services = [
     href: "/services/cleaning",
     description: "Professional residential and commercial cleaning services for spotless spaces.",
   },
+  {
+    name: "Snow Removal",
+    image: snowRemovalImg,
+    href: "/services/snow-removal",
+    description: "Reliable snow clearing for driveways, walkways, entrances, and small commercial properties.",
+  },
 ];
 
 export default function Services() {
@@ -122,6 +129,8 @@ export default function Services() {
                   <img
                     src={service.image}
                     alt={service.name}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>

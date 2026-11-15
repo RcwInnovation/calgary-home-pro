@@ -11,7 +11,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/logo-cropped.png";
 
 const services = [
   { name: "Restoration Services", href: "/services/restoration" },
@@ -26,6 +26,7 @@ const services = [
   { name: "Siding & Exterior", href: "/services/siding" },
   { name: "Decks & Fences", href: "/services/decks-fences" },
   { name: "Cleaning Services", href: "/services/cleaning" },
+  { name: "Snow Removal", href: "/services/snow-removal" },
 ];
 
 const navigation = [
@@ -62,7 +63,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex lg:items-center lg:gap-1">
+          <nav className="hidden xl:flex xl:items-center xl:gap-1">
             <NavigationMenu>
               <NavigationMenuList>
                 {navigation.map((item) =>
@@ -125,7 +126,7 @@ export function Header() {
           </nav>
 
           {/* Desktop CTAs */}
-          <div className="hidden items-center gap-3 lg:flex">
+          <div className="hidden items-center gap-3 xl:flex">
             <Button variant="ghost" size="sm" asChild>
               <a href="tel:+14031234567" className="gap-2">
                 <Phone className="h-4 w-4" />
@@ -138,16 +139,18 @@ export function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 lg:hidden">
-            <Button variant="default" size="sm" asChild>
-              <a href="tel:+14031234567">
+          <div className="flex items-center gap-2 xl:hidden">
+            <Button variant="default" size="sm" className="h-11 w-11" asChild>
+              <a href="tel:+14031234567" aria-label="Call Ninajean now">
                 <Phone className="h-4 w-4" />
               </a>
             </Button>
             <button
               type="button"
-              className="rounded-md p-2 text-foreground hover:bg-muted"
+              className="flex h-11 w-11 items-center justify-center rounded-md text-foreground hover:bg-muted"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -156,7 +159,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="border-t border-border pb-4 lg:hidden">
+          <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border pb-4 xl:hidden">
             <nav className="mt-4 space-y-1">
               {navigation.map((item) =>
                 item.hasDropdown ? (

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/logo-cropped.png";
 
 const services = [
   { name: "Restoration Services", href: "/services/restoration" },
@@ -10,6 +10,8 @@ const services = [
   { name: "Drywall & Taping", href: "/services/drywall" },
   { name: "Flooring Installation", href: "/services/flooring" },
   { name: "Renovations & Remodeling", href: "/services/renovations" },
+  { name: "Cleaning Services", href: "/services/cleaning" },
+  { name: "Snow Removal", href: "/services/snow-removal" },
 ];
 
 const quickLinks = [
@@ -76,7 +78,7 @@ export function Footer() {
               <img 
                 src={logo} 
                 alt="Nina Jean Maintenance Renovation Ltd" 
-                className="h-16 w-auto bg-white rounded-lg p-1"
+                className="h-16 w-auto rounded-lg bg-background p-1"
               />
             </Link>
             <p className="mt-4 text-sm text-background/70">

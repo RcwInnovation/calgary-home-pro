@@ -23,6 +23,7 @@ import doorsWindowsImg from "@/assets/services/doors-windows.jpg";
 import sidingImg from "@/assets/services/siding.jpg";
 import decksImg from "@/assets/services/decks.jpg";
 import cleaningImg from "@/assets/services/cleaning.jpg";
+import snowRemovalImg from "@/assets/services/snow-removal.jpg";
 
 // Service image mapping
 const serviceImages: Record<string, string> = {
@@ -38,6 +39,7 @@ const serviceImages: Record<string, string> = {
   siding: sidingImg,
   decks: decksImg,
   cleaning: cleaningImg,
+  "snow-removal": snowRemovalImg,
 };
 
 interface ServiceData {
@@ -457,6 +459,43 @@ const servicesData: Record<string, ServiceData> = {
       },
     ],
   },
+  "snow-removal": {
+    title: "Snow Removal",
+    metaTitle: "Snow Removal Services in Calgary",
+    description: [
+      "Keep your Calgary property safe and accessible throughout winter with professional snow removal from Ninajean. We clear snow from residential driveways, walkways, entrances, and small commercial properties so you can move around with confidence.",
+      "Our team provides practical snow clearing tailored to your property, including shoveling and snow-blowing for areas large and small. Choose one-time service after a snowfall or ask about recurring and seasonal options.",
+      "We understand how quickly Calgary weather can change. We work with you to establish clear service expectations, priority areas, and scheduling based on your property's needs.",
+    ],
+    includes: [
+      "Driveway snow clearing",
+      "Walkway and sidewalk shoveling",
+      "Entrance and step clearing",
+      "Small commercial parking areas",
+      "One-time and seasonal service options",
+      "Ice-control and de-icing options",
+    ],
+    bestFor: [
+      "Homeowners needing reliable winter maintenance",
+      "Seniors or residents with limited mobility",
+      "Landlords and property managers",
+      "Small businesses keeping entrances accessible",
+    ],
+    faqs: [
+      {
+        question: "Do you offer seasonal snow removal plans?",
+        answer: "Yes. We offer one-time clearing as well as recurring and seasonal service options. Contact us to discuss your property, preferred service frequency, and a clear estimate.",
+      },
+      {
+        question: "Which areas do you clear?",
+        answer: "We can clear driveways, walkways, sidewalks, steps, entrances, and small commercial parking areas. We'll confirm the exact priority areas with you before service begins.",
+      },
+      {
+        question: "Can you help with ice as well as snow?",
+        answer: "Yes, ice-control and de-icing options can be included based on your property's needs. Let us know about problem areas when you request your estimate.",
+      },
+    ],
+  },
   cleaning: {
     title: "Cleaning Services",
     metaTitle: "Cleaning Services in Calgary",
@@ -516,27 +555,27 @@ export default function ServicePage() {
             alt={service.title}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/40" />
         </div>
         
         {/* Content */}
         <div className="container-custom relative z-10 py-20 md:py-32">
-          <nav className="mb-4 text-sm text-white/70">
-            <Link to="/" className="hover:text-white transition-colors">
+          <nav className="mb-4 text-sm text-background/70">
+            <Link to="/" className="hover:text-background transition-colors">
               Home
             </Link>
             <span className="mx-2">/</span>
-            <Link to="/services" className="hover:text-white transition-colors">
+            <Link to="/services" className="hover:text-background transition-colors">
               Services
             </Link>
             <span className="mx-2">/</span>
-            <span className="text-white">{service.title}</span>
+            <span className="text-background">{service.title}</span>
           </nav>
-          <h1 className="font-heading text-3xl font-bold text-white md:text-5xl lg:text-6xl max-w-3xl">
+          <h1 className="font-heading text-3xl font-bold text-background md:text-5xl lg:text-6xl max-w-3xl">
             {service.metaTitle}
           </h1>
-          <p className="mt-4 text-lg text-white/80 max-w-2xl">
-            {service.description[0].substring(0, 150)}...
+          <p className="mt-4 text-lg text-background/80 max-w-2xl">
+            {service.description[0]}
           </p>
         </div>
       </section>
