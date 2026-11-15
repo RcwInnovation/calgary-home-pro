@@ -141,7 +141,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 xl:hidden">
             <Button variant="default" size="sm" asChild>
-              <a href="tel:+14031234567">
+              <a href="tel:+14031234567" aria-label="Call Ninajean now">
                 <Phone className="h-4 w-4" />
               </a>
             </Button>

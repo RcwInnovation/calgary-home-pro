@@ -560,21 +560,21 @@ export default function ServicePage() {
         
         {/* Content */}
         <div className="container-custom relative z-10 py-20 md:py-32">
-          <nav className="mb-4 text-sm text-white/70">
-            <Link to="/" className="hover:text-white transition-colors">
+          <nav className="mb-4 text-sm text-background/70">
+            <Link to="/" className="hover:text-background transition-colors">
               Home
             </Link>
             <span className="mx-2">/</span>
-            <Link to="/services" className="hover:text-white transition-colors">
+            <Link to="/services" className="hover:text-background transition-colors">
               Services
             </Link>
             <span className="mx-2">/</span>
-            <span className="text-white">{service.title}</span>
+            <span className="text-background">{service.title}</span>
           </nav>
-          <h1 className="font-heading text-3xl font-bold text-white md:text-5xl lg:text-6xl max-w-3xl">
+          <h1 className="font-heading text-3xl font-bold text-background md:text-5xl lg:text-6xl max-w-3xl">
             {service.metaTitle}
           </h1>
-          <p className="mt-4 text-lg text-white/80 max-w-2xl">
+          <p className="mt-4 text-lg text-background/80 max-w-2xl">
             {service.description[0].substring(0, 150)}...
           </p>
         </div>
