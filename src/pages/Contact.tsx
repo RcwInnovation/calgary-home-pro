@@ -7,7 +7,7 @@ export default function Contact() {
     <Layout>
       <section className="gradient-primary py-12 sm:py-16 md:py-20">
         <div className="container-custom text-center">
-          <h1 className="font-heading text-3xl font-bold text-primary-foreground md:text-5xl">Contact Us</h1>
+          <h1 className="font-heading text-3xl font-bold text-primary-foreground md:text-5xl">Contact RCW Integrated Solutions</h1>
           <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/85 sm:text-lg">
             Get in touch for a free estimate or to discuss your project with our team.
           </p>

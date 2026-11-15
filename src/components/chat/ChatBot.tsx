@@ -42,7 +42,7 @@ const getResponse = (message: string): string => {
     lowerMessage.includes("hey") ||
     lowerMessage.includes("hola")
   ) {
-    return "Hello! Welcome to Ninajean Maintenance & Renovation. How can I help you today? I can answer questions about our services, service areas, or help you get a free estimate.";
+    return "Hello! Welcome to RCW Integrated Solutions. How can I help you today? I can answer questions about our services, service areas, or help you get a free estimate.";
   }
 
   // Services
@@ -162,7 +162,7 @@ export function ChatBot() {
     {
       role: "assistant",
       content:
-        "Hi! 👋 Welcome to Ninajean Maintenance & Renovation. How can I help you today?",
+        "Hi! 👋 Welcome to RCW Integrated Solutions. How can I help you today?",
     },
   ]);
   const [input, setInput] = useState("");

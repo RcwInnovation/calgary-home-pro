@@ -125,7 +125,7 @@ export function QuickActions() {
       <Dialog open={installHelpOpen} onOpenChange={setInstallHelpOpen}>
         <DialogContent className="w-[calc(100vw-2rem)] max-w-md rounded-2xl">
           <DialogHeader>
-            <DialogTitle>Install the Ninajean app</DialogTitle>
+            <DialogTitle>Install the RCW Integrated Solutions app</DialogTitle>
             <DialogDescription>
               Add this website to your home screen for quick access. No app store download is needed.
             </DialogDescription>

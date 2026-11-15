@@ -73,7 +73,7 @@ export default function ServiceAreas() {
               Where We Work
             </h2>
             <p className="mt-4 text-body">
-              Ninajean Maintenance & Renovation proudly serves Calgary and nearby communities.
+              RCW Integrated Solutions proudly serves Calgary and nearby communities.
               As a local company, we understand the unique needs of our climate and building standards.
             </p>
           </div>
