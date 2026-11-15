@@ -48,6 +48,8 @@ const services = [
   "Doors & Windows",
   "Siding & Exterior Work",
   "Decks & Fences",
+  "Cleaning Services",
+  "Snow Removal",
 ];
 
 export default function ServiceAreas() {

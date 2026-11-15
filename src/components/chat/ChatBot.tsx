@@ -27,7 +27,7 @@ const knowledgeBase = {
   areas: ["Calgary", "Airdrie", "Cochrane", "Okotoks", "Chestermere"],
   contact: {
     phone: "(403) 123-4567",
-    email: "info@ninajean.ca",
+    email: "info@rcwintegratedsolutions.com",
     hours: "Mon - Sat: 7:00 AM - 6:00 PM",
   },
 };
