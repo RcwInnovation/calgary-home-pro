@@ -49,7 +49,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div id="estimate-form" className="order-1 scroll-mt-24 rounded-2xl border border-border bg-card p-4 shadow-card sm:p-6 md:p-8 lg:order-2">
+            <div id="estimate-form" className="order-1 min-w-0 scroll-mt-24 rounded-2xl border border-border bg-card p-4 shadow-card sm:p-6 md:p-8 lg:order-2">
               <h2 className="font-heading text-2xl font-bold">Get Your Free Estimate</h2>
               <p className="mt-2 text-sm text-body">Three short steps. No obligation. Tell us what you need and we&apos;ll prepare a detailed quote.</p>
               <div className="mt-6"><EstimateForm /></div>

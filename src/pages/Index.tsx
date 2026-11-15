@@ -180,7 +180,7 @@ export default function Index() {
               <MapPin className="h-4 w-4 shrink-0 text-primary" />
               {currentSlide.eyebrow}
             </div>
-            <h1 className="text-balance font-heading text-[2rem] font-bold leading-[1.15] text-background sm:text-4xl md:text-5xl lg:text-6xl">
+            <h1 className="text-balance font-heading text-[1.75rem] font-bold leading-[1.15] text-background min-[380px]:text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl">
               {currentSlide.title}
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-background/80 sm:text-lg md:text-xl">
@@ -204,14 +204,14 @@ export default function Index() {
                 key={slide.title}
                 type="button"
                 onClick={() => goToSlide(index)}
-                className="flex h-11 w-11 items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background"
+                className="flex h-11 w-9 items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background"
                 aria-label={`Go to slide ${index + 1}: ${slide.eyebrow}`}
                 aria-current={index === activeSlide ? "true" : undefined}
               >
                 <span className={`h-2.5 rounded-full transition-all ${index === activeSlide ? "w-9 bg-primary" : "w-2.5 bg-background/50 group-hover:bg-background/80"}`} />
               </button>
             ))}
-            <span className="ml-2 text-xs font-medium text-background/70">0{activeSlide + 1} / 0{heroSlides.length}</span>
+            <span className="ml-1 hidden text-xs font-medium text-background/70 min-[360px]:inline">0{activeSlide + 1} / 0{heroSlides.length}</span>
           </div>
           <div className="flex items-center gap-2">
             <button type="button" onClick={() => setIsPlaying((playing) => !playing)} className="hidden h-11 w-11 items-center justify-center rounded-full border border-background/30 bg-foreground/30 text-background backdrop-blur-sm transition-colors hover:bg-foreground/50 sm:flex" aria-label={isPlaying ? "Pause slider" : "Play slider"}>

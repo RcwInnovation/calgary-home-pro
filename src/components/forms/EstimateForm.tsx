@@ -166,9 +166,9 @@ export function EstimateForm({ preselectedService, compact = false }: EstimateFo
   }
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit} noValidate className="scroll-mt-24 space-y-5">
+    <form ref={formRef} onSubmit={handleSubmit} noValidate className="w-full min-w-0 scroll-mt-24 space-y-5">
       <div aria-label={`Step ${step} of 3: ${stepLabels[step - 1]}`}>
-        <div className="flex items-center justify-between gap-3 text-sm">
+        <div className="flex min-w-0 items-center justify-between gap-3 text-sm">
           <span className="font-semibold text-foreground">{stepLabels[step - 1]}</span>
           <span className="text-muted-foreground">Step {step} of 3</span>
         </div>
@@ -274,7 +274,7 @@ export function EstimateForm({ preselectedService, compact = false }: EstimateFo
           <div className="space-y-2">
             <Label htmlFor="description">Project description *</Label>
             <Textarea id="description" data-field="description" placeholder="What would you like done? Include approximate sizes, current conditions, or any specific concerns." className="min-h-[130px] text-base" value={formData.description} onChange={(event) => updateField("description", event.target.value)} aria-invalid={!!errors.description} aria-describedby={errors.description ? "description-error" : undefined} />
-            <div className="flex items-center justify-between gap-3">
+            <div className="flex min-w-0 flex-wrap items-center justify-between gap-3">
               {errorMessage("description")}
               <span className="ml-auto text-xs text-muted-foreground">{formData.description.length} characters</span>
             </div>
