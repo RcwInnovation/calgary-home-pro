@@ -28,9 +28,9 @@ export default function Contact() {
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10"><Phone className="h-6 w-6 text-primary" /></div>
                   <div className="min-w-0"><h3 className="font-semibold">Phone</h3><p className="mt-1 break-words text-body group-hover:text-primary">(403) 123-4567</p></div>
                 </a>
-                <a href="mailto:info@ninajean.ca" className="card-elevated group flex items-start gap-4 p-5">
+                <a href="mailto:info@rcwintegratedsolutions.com" className="card-elevated group flex items-start gap-4 p-5">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10"><Mail className="h-6 w-6 text-primary" /></div>
-                  <div className="min-w-0"><h3 className="font-semibold">Email</h3><p className="mt-1 break-words text-body group-hover:text-primary">info@ninajean.ca</p></div>
+                  <div className="min-w-0"><h3 className="font-semibold">Email</h3><p className="mt-1 break-words text-body group-hover:text-primary">info@rcwintegratedsolutions.com</p></div>
                 </a>
                 <div className="flex items-start gap-4 rounded-xl bg-section-alt p-5">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10"><MapPin className="h-6 w-6 text-primary" /></div>

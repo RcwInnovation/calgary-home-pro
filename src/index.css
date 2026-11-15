@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,74 +7,77 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --foreground: 224 48% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 224 48% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 224 48% 13%;
 
-    --primary: 110 55% 50%;
+    --primary: 220 84% 46%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 110 20% 95%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 43 92% 94%;
+    --secondary-foreground: 224 48% 13%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 216 28% 96%;
+    --muted-foreground: 217 16% 42%;
 
-    --accent: 110 55% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 43 96% 55%;
+    --accent-foreground: 224 48% 13%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 74% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
-    --ring: 110 55% 50%;
+    --border: 215 24% 87%;
+    --input: 215 24% 82%;
+    --ring: 220 84% 46%;
 
-    --radius: 0.5rem;
+    --radius: 0.65rem;
 
-    /* Custom tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(110 55% 50%) 0%, hsl(110 45% 40%) 100%);
-    --card-shadow: 0 4px 20px -2px hsl(0 0% 10% / 0.08);
-    --card-shadow-hover: 0 8px 30px -4px hsl(0 0% 10% / 0.12);
-    --section-alt: 110 15% 97%;
-    --text-heading: 0 0% 8%;
-    --text-body: 0 0% 35%;
-    --success: 110 60% 45%;
-    --warning: 38 92% 50%;
+    --hero-gradient: linear-gradient(135deg, hsl(224 52% 16%) 0%, hsl(220 84% 42%) 72%, hsl(198 90% 42%) 100%);
+    --card-shadow: 0 4px 20px -2px hsl(224 48% 13% / 0.08);
+    --card-shadow-hover: 0 10px 30px -4px hsl(220 84% 30% / 0.14);
+    --section-alt: 210 36% 97%;
+    --text-heading: 224 48% 13%;
+    --text-body: 217 16% 38%;
+    --success: 152 55% 38%;
+    --warning: 43 96% 55%;
   }
 
   .dark {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 95%;
+    --background: 224 48% 10%;
+    --foreground: 210 30% 96%;
 
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 95%;
+    --card: 224 40% 14%;
+    --card-foreground: 210 30% 96%;
 
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 224 40% 14%;
+    --popover-foreground: 210 30% 96%;
 
-    --primary: 110 55% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 198 90% 52%;
+    --primary-foreground: 224 48% 10%;
 
-    --secondary: 0 0% 18%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 223 28% 20%;
+    --secondary-foreground: 210 30% 96%;
 
-    --muted: 0 0% 18%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 223 28% 18%;
+    --muted-foreground: 215 20% 70%;
 
-    --accent: 110 55% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 43 96% 55%;
+    --accent-foreground: 224 48% 10%;
 
     --destructive: 0 62% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 22%;
-    --input: 0 0% 22%;
-    --ring: 110 55% 50%;
+    --border: 222 24% 24%;
+    --input: 222 24% 28%;
+    --ring: 198 90% 52%;
+
+    --section-alt: 224 40% 13%;
+    --text-heading: 210 30% 96%;
+    --text-body: 215 20% 74%;
   }
 }
 
@@ -94,11 +97,15 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-bold tracking-tight text-heading;
   }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
 }
 
 @layer components {
   .section-padding {
-    @apply px-4 py-16 md:px-6 md:py-24 lg:px-8;
+    @apply px-4 py-14 md:px-6 md:py-20 lg:px-8;
   }
 
   .container-custom {
@@ -144,22 +151,22 @@
   }
 
   @keyframes slideUp {
-    from { 
+    from {
       opacity: 0;
       transform: translateY(20px);
     }
-    to { 
+    to {
       opacity: 1;
       transform: translateY(0);
     }
   }
 
   @keyframes scaleIn {
-    from { 
+    from {
       opacity: 0;
       transform: scale(0.95);
     }
-    to { 
+    to {
       opacity: 1;
       transform: scale(1);
     }

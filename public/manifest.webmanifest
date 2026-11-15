@@ -1,12 +1,12 @@
 {
-  "name": "Ninajean Maintenance & Renovation",
-  "short_name": "Ninajean",
-  "description": "Maintenance, renovation, cleaning and snow removal services in Calgary, Alberta.",
+  "name": "RCW Integrated Solutions",
+  "short_name": "RCW Solutions",
+  "description": "Maintenance, renovation, restoration, cleaning and snow removal services in Calgary, Alberta.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#58b947",
+  "theme_color": "#1554c5",
   "icons": [
     {
       "src": "/icons/icon-192.png",

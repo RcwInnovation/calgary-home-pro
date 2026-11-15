@@ -94,7 +94,7 @@ export function QuickActions() {
                 </a>
               </Button>
               <Button variant="outline" className="h-12 w-full justify-start" asChild>
-                <a href="mailto:info@ninajean.ca?subject=Free%20Estimate%20Request">
+                <a href="mailto:info@rcwintegratedsolutions.com?subject=Free%20Estimate%20Request">
                   <Mail className="h-5 w-5" />
                   Send an Email
                 </a>
