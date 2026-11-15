@@ -301,7 +301,7 @@ export function EstimateForm({ preselectedService, compact = false }: EstimateFo
         </div>
       )}
 
-      <div className="flex gap-3 pt-1">
+      <div className="flex flex-col-reverse gap-3 pt-1 sm:flex-row">
         {step > 1 && <Button type="button" variant="outline" size="lg" className="h-12 flex-1 px-4 sm:flex-none" onClick={() => { setErrors({}); setStep((current) => current - 1); }}><ArrowLeft className="h-4 w-4" />Back</Button>}
         {step < 3 ? (
           <Button type="button" size="lg" className="h-12 flex-1 px-5" onClick={handleNext}>Continue<ArrowRight className="h-4 w-4" /></Button>
