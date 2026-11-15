@@ -143,6 +143,15 @@ const BlogPost = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>{post.title} | RCW Integrated Solutions</title>
+        <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={`/blog/${slug}`} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:url" content={`/blog/${slug}`} />
+        <meta property="og:type" content="article" />
+      </Helmet>
       {/* Hero Image */}
       <section className="relative h-[40vh] min-h-[300px] md:h-[50vh]">
         <img
