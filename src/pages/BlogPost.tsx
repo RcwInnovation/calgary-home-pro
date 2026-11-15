@@ -121,6 +121,11 @@ const BlogPost = () => {
   if (!post) {
     return (
       <Layout>
+        <Helmet>
+          <title>Article Not Found | RCW Integrated Solutions</title>
+          <meta name="description" content="The requested article could not be found. Explore the RCW Integrated Solutions blog." />
+          <meta name="robots" content="noindex" />
+        </Helmet>
         <div className="container-custom py-24 text-center">
           <h1 className="font-heading text-3xl font-bold">Artículo no encontrado</h1>
           <p className="mt-4 text-muted-foreground">El artículo que buscas no existe.</p>
